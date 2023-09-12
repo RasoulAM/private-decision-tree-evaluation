@@ -1,23 +1,26 @@
-# Private Decision Tree Evaluation
+# private-decision-tree-evaluation
 
-This is the artifact for the paper: "Level Up: Private Non-Interactive Decision Tree Evaluation using Levelled Homomorphic Encryption"
 
-## Requirements
-To build the project, you need the following:
-- CMake 3.10 or higher
-- C++ compiler with C++17 support
-- Microsoft SEAL 
+## Format of Tree
+Traverse the tree in preorder format. Each line is one node.
+
+If it's a non-leaf node:
+```
+<threshold-value> <attribute-index>
+```
+
+If it's a leaf node:
+```
+<classification-value> -1
+```
+
+## Format of the input
+Attribute $i$ in on line $i$
 
 ## Building the project
 To build the project
 ```
     cd src
-    mkdir build
-    cd build
-    cmake ..
-    make
-    cmake ../../
-    cd src2
     mkdir build
     cd build
     cmake ..
