@@ -1,0 +1,50 @@
+### Main experiments
+
+synthetic_experiment_num_nodes:
+    max_depth: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    bitlength: [8, 16, 26, 32]
+    num_attributes: [32]
+    repeat: 10    
+
+synthetic_experiment_num_attr:
+    max_depth: [6]
+    bitlength: [8, 12, 16, 26, 32]
+    num_attributes: [7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102, 107]
+    repeat: 10    
+
+dataset_experiment:
+    dataset: ['breast', 'steel', 'heart', 'spam']
+    bitlength: [1,2,3,4,5,6,7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+    hamming_weight: [0,1,2,3,4,8,16] # Hamming weight=0 represents folklore
+    repeat: 10
+
+dataset_experiment_xcmp:
+    dataset: ['breast', 'steel', 'heart', 'spam']
+    bitlength: [1,2,3,4,5,6,7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+    mult_path: [False]
+    repeat: 10
+
+dataset_experiment_sortinghats:
+    dataset: ['breast', 'steel', 'heart', 'spam']
+    repeat: 10
+
+plotting:
+    dataset: ['breast', 'steel', 'heart', 'spam']
+
+### For Testing Purposes
+
+# dataset_experiment:
+#     dataset: ['breast', 'steel', 'heart', 'spam']
+#     bitlength: [36]
+#     hamming_weight: [0,2,4,8,16] # Hamming weight=0 represents folklore
+#     repeat: 1
+
+# dataset_experiment_xcmp:
+#     dataset: ['breast', 'steel', 'heart', 'spam']
+#     bitlength: [11, 12, 13, 14, 22, 23, 24, 25, 26, 30, 31, 32, 33, 34, 35, 36]
+#     mult_path: [False, True]
+#     repeat: 1
+
+# dataset_experiment_sortinghats:
+#     dataset: ['breast', 'steel', 'heart', 'spam']
+#     repeat: 1
